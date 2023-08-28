@@ -1,0 +1,17 @@
+# dev Environment configurations,
+
+server:
+  port: 8090
+  
+spring:
+  application:
+    name: Product-Service
+    
+  data:
+    mongodb:
+      database: product
+      host: localhost
+      port: 27017
+      repositories:
+        enabled: true
+        type: auto
