@@ -1,5 +1,7 @@
 package com.product.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +31,11 @@ public class ProductService
 				productRepo.save(product);
 				log.info("Product {} is saved",product.getId());	
 				
+	}
+	
+	public List<Product> getProducts()
+	{
+		List<Product> product = productRepo.findAll();
+		return product;
 	}
 }
