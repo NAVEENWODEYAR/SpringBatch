@@ -40,12 +40,12 @@ public class ProductController
 						return products;
 	}
 	
-	@GetMapping
-	@ResponseStatus(HttpStatus.OK)
-	public Product getProductByName(@PathVariable String name)
-	{
-		return productService.getProduct(name);
-	}
+//	@GetMapping
+//	@ResponseStatus(HttpStatus.OK)
+//	public Product getProductByName(@PathVariable String name)
+//	{
+//		return productService.getProduct(name);
+//	}
 	
 
 }
