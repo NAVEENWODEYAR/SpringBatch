@@ -31,7 +31,7 @@ public class ProductController
 		
 	}
 	
-	@GetMapping
+	@GetMapping // get all product details,
 	@ResponseStatus(HttpStatus.FOUND)
 	public List<Product> getProducts()
 	{
@@ -39,5 +39,13 @@ public class ProductController
 		log.info("Products found");
 						return products;
 	}
+	
+	@GetMapping
+	@ResponseStatus(HttpStatus.FOUND)
+	public Product getProduct(@PathVariable String name)
+	{
+		return productService.getProduct(name);
+	}
+	
 
 }

@@ -6,5 +6,5 @@ import com.product.modal.Product;
 
 public interface ProductRepo extends MongoRepository<Product, String>
 {
-	public void findByname(String name);
+	public Product findByname(String name);
 }
