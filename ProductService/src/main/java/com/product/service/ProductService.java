@@ -33,9 +33,11 @@ public class ProductService
 				
 	}
 	
+	// SELECT * FROM product;
 	public List<Product> getProducts()
 	{
 		List<Product> product = productRepo.findAll();
 		return product;
 	}
+	
 }
