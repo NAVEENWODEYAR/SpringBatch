@@ -40,7 +40,7 @@ public class ProductController
 						return products;
 	}
 	
-	@GetMapping("/getProduct")
+	@GetMapping("/getProduct/{name}")
 	@ResponseStatus(HttpStatus.OK)
 	public Product getProductByName(@PathVariable String name)
 	{
