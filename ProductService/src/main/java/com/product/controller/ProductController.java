@@ -41,9 +41,10 @@ public class ProductController
 	}
 	
 	@GetMapping("/getProduct/{name}")
-	@ResponseStatus(HttpStatus.OK)
+//	@ResponseStatus(HttpStatus.OK)
 	public Product getProductByName(@PathVariable String name)
 	{
+		log.info("Product found");
 		return productService.getProduct(name);
 	}
 	

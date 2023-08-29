@@ -37,6 +37,7 @@ public class ProductService
 	public List<Product> getProducts()
 	{
 		List<Product> product = productRepo.findAll();
+		log.info("Products found in the database ");
 		return product;
 	}
 	
