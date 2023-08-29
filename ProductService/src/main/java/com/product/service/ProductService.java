@@ -40,4 +40,10 @@ public class ProductService
 		return product;
 	}
 	
+	// SELECT * FROM product WHERE product.name=name;
+	public void deleteProduct(ProductDTO productDTO, String name)
+	{
+		productRepo.findByname(name);
+	}
+	
 }
