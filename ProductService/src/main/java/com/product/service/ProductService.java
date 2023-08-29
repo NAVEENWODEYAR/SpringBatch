@@ -19,7 +19,7 @@ public class ProductService
 	@Autowired
 	private ProductRepo productRepo;
 	
-	// business logic to store the data into the database,
+	// INSERT INTO TABLE product VALUES();
 	public void createProduct(ProductDTO productDTO)
 	{
 		Product product = Product.builder()
