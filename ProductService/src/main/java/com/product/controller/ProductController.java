@@ -27,7 +27,7 @@ public class ProductController
 	public void createProduct(@RequestBody ProductDTO productDTO )
 	{
 		productService.createProduct(productDTO);
-		log.info("Data saved,");
+		log.info("Data saved successfully,");
 		
 	}
 	
