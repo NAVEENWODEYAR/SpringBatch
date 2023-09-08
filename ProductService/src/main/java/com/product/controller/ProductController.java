@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ProductController 
 {
 	// DI(constructor injection)
-	@Autowired
+	@Autowired 
 	private ProductService productService;
 	
 	// API's
@@ -28,6 +28,7 @@ public class ProductController
 	{
 		productService.createProduct(productDTO);
 		log.info("Data saved successfully,");
+		log.info("msg", new RuntimeException());
 		
 	}
 	
