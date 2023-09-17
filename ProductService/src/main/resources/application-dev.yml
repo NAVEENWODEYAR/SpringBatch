@@ -1,0 +1,18 @@
+# Development - Environment configurations,
+
+server:
+  port: 1234
+
+spring:
+  application:
+    name: Product-Service
+  datasource:
+    url: jdbc:h2:mem:productdb
+    driver-class-name: org.h2.Driver
+    username: root
+    password: boss
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+ 
