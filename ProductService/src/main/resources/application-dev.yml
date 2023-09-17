@@ -1,4 +1,4 @@
-# dev Environment configurations,
+# development Environment configurations,
 
 server:
   port: 8080

@@ -1,4 +1,4 @@
-# prod Environment configurations,
+# production - Environment configurations,
 
 spring:
   application:
