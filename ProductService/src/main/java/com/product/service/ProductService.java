@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.product.dto.ProductDTO;
+import com.product.dto.ProductResponse;
 import com.product.modal.Product;
 import com.product.repo.ProductRepo;
 
@@ -20,12 +21,12 @@ public class ProductService
 	private ProductRepo productRepo;
 	
 	// INSERT INTO TABLE product VALUES();
-	public void createProduct(ProductDTO productDTO)
+	public void createProduct(ProductResponse productResponse)
 	{
 		Product product = Product.builder()
-							.name(productDTO.getName())
-							.description(productDTO.getDescription())
-							.price(productDTO.getPrice())
+							.name(productResponse.getName())
+							.description(productResponse.getDescription())
+							.price(productResponse.getPrice())
 							.build();
 				
 				productRepo.save(product);

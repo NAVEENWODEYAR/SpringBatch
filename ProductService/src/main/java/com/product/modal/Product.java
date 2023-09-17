@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.product.dto.ProductDTO;
+import com.product.dto.ProductResponse;
 
 import lombok.*;
 
@@ -23,10 +24,10 @@ public class Product
 	private String description;
 	private BigDecimal price;
 	
-		public Product(ProductDTO productDTO)
+		public Product(ProductResponse productResponse)
 		{
-			this.name = productDTO.getName();
-			this.description = productDTO.getDescription();
-			this.price = productDTO.getPrice();
+			this.name = productResponse.getName();
+			this.description = productResponse.getDescription();
+			this.price = productResponse.getPrice();
 		}
 }

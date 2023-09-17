@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import com.product.dto.ProductDTO;
+import com.product.dto.ProductResponse;
 import com.product.modal.Product;
 import com.product.service.ProductService;
 
@@ -24,9 +25,9 @@ public class ProductController
 	// API's
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public void createProduct(@RequestBody ProductDTO productDTO )
+	public void createProduct(@RequestBody ProductResponse productResponse )
 	{
-		productService.createProduct(productDTO);
+		productService.createProduct(productResponse);
 		log.info("Data saved successfully,");
 		log.info("msg", new RuntimeException());
 		
