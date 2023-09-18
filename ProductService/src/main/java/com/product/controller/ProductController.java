@@ -42,4 +42,10 @@ public class ProductController
 						return products;
 	}
 	
+	@GetMapping("/testPoint")
+	public String testMsg()
+	{
+		return "Generating the log files";
+	}
+	
 }
