@@ -52,6 +52,7 @@ public class ProductService
 	public void deleteProduct()
 	{
 		productRepo.deleteAll();
+		log.info("Products deleted from the table,");
 	}
 	
 }
