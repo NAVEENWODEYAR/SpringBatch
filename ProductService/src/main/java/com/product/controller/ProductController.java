@@ -2,6 +2,7 @@ package com.product.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -10,17 +11,18 @@ import com.product.dto.ProductDTO;
 import com.product.dto.ProductResponse;
 import com.product.modal.Product;
 import com.product.service.ProductService;
-
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.*;
 
 @RestController
 @RequestMapping("/product")
-@Slf4j
 public class ProductController 
 {
 	// DI(constructor injection)
 	@Autowired 
 	private ProductService productService;
+	
+	// adding the logger,
+	Logger log = LoggerFactory.getLogger(ProductController.class);
 	
 	// API's
 	@PostMapping
@@ -28,8 +30,8 @@ public class ProductController
 	public void createProduct(@RequestBody ProductResponse productResponse )
 	{
 		productService.createProduct(productResponse);
-		log.info("Data saved successfully,");
-		log.info("msg", new RuntimeException());
+//		log.info("Data saved successfully,");
+//		log.info("msg", new RuntimeException());
 		
 	}
 	
@@ -42,10 +44,13 @@ public class ProductController
 						return products;
 	}
 	
-	@GetMapping("/testPoint")
-	public String testMsg()
+	@GetMapping("/testPoint/{name}")
+	public String testMsg(@PathVariable String name)
 	{
-		return "Generating the log files";
+		log.debug("Request {}",name);
+		String response = "Hi "+name+" you are Generating the log files";
+		log.debug("Response {}",name);
+		return response;
 	}
 	
 }
