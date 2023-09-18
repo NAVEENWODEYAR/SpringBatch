@@ -7,8 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import com.product.dto.ProductDTO;
-import com.product.dto.ProductResponse;
+import com.product.dto.*;
 import com.product.modal.Product;
 import com.product.service.ProductService;
 import org.slf4j.*;
@@ -41,7 +40,7 @@ public class ProductController
 	{
 		List<Product> products = productService.getProducts();
 		log.info("Products found");
-						return products;
+			return products;
 	}
 	
 	@GetMapping("/testPoint/{name}")
