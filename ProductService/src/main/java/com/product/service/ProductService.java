@@ -48,4 +48,10 @@ public class ProductService
 		return productRepo.findByname(name);
 	}
 	
+	// delete from table
+	public void deleteProduct()
+	{
+		productRepo.deleteAll();
+	}
+	
 }
