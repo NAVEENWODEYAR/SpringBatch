@@ -52,10 +52,4 @@ public class ProductController
 		return response;
 	}
 	
-	@RequestMapping(method = RequestMethod.GET,path = "/isBoolean")
-	public Boolean isProductExistsByName(String name)
-	{
-		return productService.isProductExistsByName(name);
-	}
-	
 }
