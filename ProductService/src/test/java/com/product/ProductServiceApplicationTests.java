@@ -10,7 +10,7 @@ class ProductServiceApplicationTests
 	@Test
 	void contextLoads() 
 	{
-		
+		System.out.println("J unit test");
 	}
 
 }
