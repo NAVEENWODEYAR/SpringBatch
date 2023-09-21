@@ -28,8 +28,8 @@ public class ProductController
 	public void createProduct(@RequestBody ProductResponse productResponse )
 	{
 		productService.createProduct(productResponse);
-//		log.info("Data saved successfully,");
-//		log.info("msg", new RuntimeException());
+		log.info("Data saved successfully,");
+		log.info("msg", new RuntimeException());
 		
 	}
 	
