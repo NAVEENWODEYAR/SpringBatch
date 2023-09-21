@@ -9,5 +9,5 @@ public interface ProductRepo extends MongoRepository<Product, String>
 	// findByName queries,
 	public Product findByname(String name);
 	
-	public Boolean isProductExistsByName(String name);
+//	public Boolean isProductExistsByName(String name);
 }

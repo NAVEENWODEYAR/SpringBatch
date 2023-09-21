@@ -55,10 +55,6 @@ public class ProductService
 		log.info("Products deleted from the table,");
 	}
 	
-	// weather present or not,
-	public Boolean isProductExistsByName(String name)
-	{
-		return productRepo.isProductExistsByName(name);
-	}
+	
 	
 }
