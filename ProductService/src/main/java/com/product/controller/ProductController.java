@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import com.product.dto.*;
 import com.product.modal.Product;
 import com.product.service.ProductService;
+
+import lombok.extern.slf4j.Slf4j;
+
 import org.slf4j.*;
 
 @RestController
+@Slf4j
 @RequestMapping("/product")
 public class ProductController 
 {
