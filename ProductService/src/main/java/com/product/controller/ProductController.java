@@ -26,7 +26,7 @@ public class ProductController
 	// adding the logger,
 	Logger log = LoggerFactory.getLogger(ProductController.class);
 	
-	// API's
+	// API's(endPoints)
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public void createProduct(@RequestBody ProductResponse productResponse )
