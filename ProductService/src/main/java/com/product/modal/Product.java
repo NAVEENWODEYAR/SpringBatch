@@ -1,14 +1,14 @@
 package com.product.modal;
 
-import java.math.BigDecimal;
-
+import com.product.dto.ProductResponse;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.product.dto.ProductDTO;
-import com.product.dto.ProductResponse;
-
-import lombok.*;
+import java.math.BigDecimal;
 
 
 @Document(value = "product")
@@ -16,18 +16,16 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Product
-{
-	@Id
-	private String id;
-	private String name;
-	private String description;
-	private BigDecimal price;
-	
-		public Product(ProductResponse productResponse)
-		{
-			this.name = productResponse.getName();
-			this.description = productResponse.getDescription();
-			this.price = productResponse.getPrice();
-		}
+public class Product {
+    @Id
+    private String id;
+    private String name;
+    private String description;
+    private BigDecimal price;
+
+    public Product(ProductResponse productResponse) {
+        this.name = productResponse.getName();
+        this.description = productResponse.getDescription();
+        this.price = productResponse.getPrice();
+    }
 }
