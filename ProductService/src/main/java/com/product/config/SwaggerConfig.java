@@ -1,4 +1,4 @@
-package com.product.controller;
+package com.product.config;
 /*
  * @author NaveenWodeyar
  * @date 28-08-2024

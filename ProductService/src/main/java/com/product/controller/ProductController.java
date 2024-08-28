@@ -3,6 +3,7 @@ package com.product.controller;
 import com.product.dto.ProductResponse;
 import com.product.modal.Product;
 import com.product.service.ProductService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "Product_Controller",description = "Product CRUD operations endPoints,")
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -36,7 +38,7 @@ public class ProductController {
 
     }
 
-    @GetMapping // get all product details,
+    @GetMapping("/list")
     @ResponseStatus(HttpStatus.FOUND)
     public List<Product> getProducts() {
         List<Product> products = productService.getProducts();

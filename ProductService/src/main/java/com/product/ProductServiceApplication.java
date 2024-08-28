@@ -13,9 +13,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @OpenAPIDefinition(
         info = @Info(
-                title = "ASFALEA[ασφάλεια,Greek]~~[SECURITY]",
+                title = "PRODUCT_SERVICE",
                 version = "1.0",
-                description = "Spring Boot demo project for spring_security,",
+                description = "Spring Boot demo project for spring_batch,",
                 termsOfService = "http://terms.example.com",
                 contact = @Contact(
                         name = "Naveen K Wodeyar",
@@ -29,13 +29,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         ),
         servers = {
                 @Server(
-                        url = "http://localhost:8071",
+                        url = "http://localhost:1234",
                         description = "Testing server",
                         variables = {
                                 @ServerVariable(
                                         name = "port",
                                         description = "Port number",
-                                        defaultValue = "7070"
+                                        defaultValue = "1234"
                                 )
                         }
                 ),
@@ -47,14 +47,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         externalDocs = @ExternalDocumentation(
                 description = "Find more info here",
                 url = "http://example.com/docs"
-        ),
-        security = @SecurityRequirement(name = "bearerAuth")
-)
-@SecurityScheme(
-        name = "bearerAuth",
-        type = SecuritySchemeType.HTTP,
-        scheme = "bearer",
-        bearerFormat = "JWT"
+        )
+//        security = @SecurityRequirement(name = "bearerAuth")
+//)
+//@SecurityScheme(
+//        name = "bearerAuth",
+//        type = SecuritySchemeType.HTTP,
+//        type = SecuritySchemeType.HTTP,
+//        scheme = "bearer",
+//        bearerFormat = "JWT"
 )
 @SpringBootApplication
 public class ProductServiceApplication {
