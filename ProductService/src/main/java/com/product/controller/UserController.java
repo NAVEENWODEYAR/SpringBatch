@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Test_Controller",description = "Test controller to check the application status,")
 @RestController
 @RequestMapping("/api/v1/test")
-public class TestController {
+public class UserController {
 
     @GetMapping
     public ResponseEntity<?> test() {
