@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Tag(name = "Test_Controller",description = "Test controller to check the application status,")
 @RestController
-@RequestMapping("/api/v1/test")
+@RequestMapping("/v1/user")
 public class UserController {
 
     @GetMapping
@@ -22,4 +22,5 @@ public class UserController {
                 .header("Content-Type", "text/plain")
                 .body("Welcome to the Product_Service!,");
     }
+
 }

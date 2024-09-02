@@ -15,7 +15,7 @@ import java.util.List;
 
 @Tag(name = "Product_Controller",description = "Product CRUD operations endPoints,")
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/v1/product")
 public class ProductController {
     @Autowired
     private ProductService productService;
