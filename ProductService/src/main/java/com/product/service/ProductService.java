@@ -6,7 +6,6 @@ import com.product.repo.ProductRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -43,7 +42,7 @@ public class ProductService {
     // delete from table
     public void deleteProduct() {
         productRepo.deleteAll();
-        log.info("Products deleted from the table,");
+        log.warn("Products deleted from the table,");
     }
 
 
