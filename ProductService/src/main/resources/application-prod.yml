@@ -1,4 +1,4 @@
-# production - Environment configurations,
+# Prod/Live - Environment configurations,
 
 server:
   port: 5678
