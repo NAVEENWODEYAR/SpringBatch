@@ -33,7 +33,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestBody ProductResponse productResponse) {
         productService.createProduct(productResponse);
-        log.info("Data saved successfully,");
+        log.info("Data saved/persisted successfully,");
         log.info("msg", new RuntimeException());
 
     }
@@ -42,7 +42,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.FOUND)
     public List<Product> getProducts() {
         List<Product> products = productService.getProducts();
-        log.info("Products found");
+        log.info("Products record found");
         return products;
     }
 
