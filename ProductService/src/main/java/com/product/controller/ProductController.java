@@ -42,7 +42,7 @@ public class ProductController {
     @ResponseStatus(HttpStatus.FOUND)
     public List<Product> getProducts() {
         List<Product> products = productService.getProducts();
-        log.info("Products record found");
+        log.info("Product records/List found");
         return products;
     }
 
