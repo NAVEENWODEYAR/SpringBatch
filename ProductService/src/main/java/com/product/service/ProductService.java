@@ -23,7 +23,7 @@ public class ProductService {
                 .build();
 
         productRepo.save(product);
-        log.info("Product {} is saved", product.getId());
+        log.info("Product records {} is saved", product.getId());
 
     }
 
@@ -42,7 +42,7 @@ public class ProductService {
     // delete from table
     public void deleteProduct() {
         productRepo.deleteAll();
-        log.warn("Products deleted from the table,");
+        log.warn("Product records deleted from the database,");
     }
 
 
